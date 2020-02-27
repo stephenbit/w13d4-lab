@@ -14,4 +14,6 @@ public interface CustomerRepository extends JpaRepository<Customer, Long>, Custo
 
     List<Customer> findCustomersByTownAndBookingsCourseName(String town, String courseName);
 
+    List<Customer> findCustomersByAgeGreaterThanAndTownIgnoreCaseAndBookingsCourseNameIgnoreCase(int age, String town, String courseName);
+
 }
